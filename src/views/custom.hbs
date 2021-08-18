@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+
+    <title>Express Pizza</title>
+</head>
+
+<body class="container">
+    <h1>Build your own pizza</h1>
+
+    <form action="/confirmation" method="POST">
+        <!-- select -->
+        <select name="size" class="form-select mb-3" aria-label="Default select example">
+            <option disabled>choose your size</option>
+            <option value="Large">Large</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Small">Small</option>
+        </select>
+
+        <!-- toppings -->
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="pepperoni" value="pepperoni" name="toppings" autocomplete="off"
+                checked />
+            <label class="btn btn-outline-primary" for="pepperoni">pepperoni</label>
+
+            <input type="checkbox" class="btn-check" id="ham" value="ham" name="toppings" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="ham">ham</label>
+
+            <input type="checkbox" class="btn-check" id="bacon" value="bacon" name="toppings" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="bacon">bacon</label>
+
+            <input type="checkbox" class="btn-check" id="mushrooms" value="mushrooms" name="toppings"
+                autocomplete="off" />
+            <label class="btn btn-outline-primary" for="mushrooms">mushrooms</label>
+
+            <input type="checkbox" class="btn-check" id="olives" value="olives" name="toppings" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="olives">olives</label>
+
+            <input type="checkbox" class="btn-check" id="onions" value="onions" name="toppings" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="onions">onions</label>
+
+            <input type="checkbox" class="btn-check" id="anchovies" value="anchovies" name="toppings"
+                autocomplete="off" />
+            <label class="btn btn-outline-primary" for="anchovies">anchovies</label>
+
+            <input type="checkbox" class="btn-check" id="pineapple" value="pineapple" name="toppings"
+                autocomplete="off" />
+            <label class="btn btn-outline-primary" for="pineapple">pineapple</label>
+
+            <input type="checkbox" class="btn-check" id="greenPepper" value="green pepper" name="toppings"
+                autocomplete="off" />
+            <label class="btn btn-outline-primary" for="greenPepper">green peppers</label>
+
+            <input type="checkbox" class="btn-check" id="italianSausage" value="italian sausage" name="toppings"
+                autocomplete="off" />
+            <label class="btn btn-outline-primary" for="italianSausage">italian
+                sausage</label>
+
+            <input type="checkbox" class="btn-check" id="spinach" value="spinach" name="toppings" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="spinach">spinach</label>
+
+        </div>
+        <!-- end toppings -->
+
+        <br />
+        <!-- vegan cheese -->
+        <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" value="true" id="veganCheese" name="veganCheese"/>
+            <label class="form-check-label" for="veganCheese">
+                Vegan cheese
+            </label>
+        </div>
+
+        <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" value="true" id="glutenFree" name="glutenFree"/>
+            <label class="form-check-label" for="glutenFree">
+                Gluten free crust? ($2.00 extra)
+            </label>
+        </div>
+
+        <br />
+        <!-- special instructions -->
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                style="height: 100px" name="specialInstructions"></textarea>
+            <label for="floatingTextarea2">Special Instructions (optional)</label>
+        </div>
+
+        <br />
+        <!-- submit -->
+        <button type="submit" class="btn btn-primary mt-3">Calculate Price</button>
+        <a href="/">Nevermind</a>
+    </form>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
